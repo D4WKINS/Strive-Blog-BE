@@ -40,7 +40,7 @@ server.use(forbidden);
 
 server.use(catchAllErrorHandler);
 
-console.log(listEndpoints(server));
+console.table(listEndpoints(server));
 
 server.listen(PORT, () => console.log("✅ Server is running on port : ", PORT));
 
