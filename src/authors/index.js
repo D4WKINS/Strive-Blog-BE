@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const authorsFilePath = path.join(__dirname, "authors.json");
-
+// console.log(authorsFilePath)
 const router = express.Router();
 
 // get all authors
@@ -26,6 +26,7 @@ router.get("/", async (req, res, next) => {
     const fileAsJSON = JSON.parse(fileAsString);
     res.send(fileAsJSON);
   } catch (error) {
+    console.log(err.code)
     res.send(500).send({ message: error.message });
   }
 });
