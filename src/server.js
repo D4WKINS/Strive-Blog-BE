@@ -26,6 +26,7 @@ const server = express();
 
 const PORT = process.env.PORT || 3001;
 
+const whitelist = [process.env.FRONTEND_URL, process.env.FRONTEND_PROD_URL]
 server.use(
   cors({
     origin: (origin, callback) => {
