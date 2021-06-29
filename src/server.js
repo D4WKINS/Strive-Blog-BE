@@ -27,7 +27,7 @@ const server = express();
 const PORT = process.env.PORT || 3001;
 
 const corsOptions = {
-  origin: "http://cryingintheshower.com"
+  origin: "http://localhost/3001"
 }
   
 server.use(cors(corsOptions ))
