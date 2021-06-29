@@ -14,6 +14,8 @@ import path, { dirname } from "path";
 
 import { fileURLToPath } from "url";
 
+
+
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = dirname(__filename);
@@ -22,7 +24,7 @@ const publicDirectory = path.join(__dirname, "../public");
 
 const server = express();
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const corsOptions = {
   origin: "http://cryingintheshower.com"
