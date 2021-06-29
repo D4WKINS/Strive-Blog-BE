@@ -24,7 +24,11 @@ const server = express();
 
 const PORT = 3001;
 
-server.use(cors());
+const corsOptions = {
+  origin: "http://cryingintheshower.com"
+}
+  
+server.use(cors(corsOptions ))
 
 server.use(express.json());
 
