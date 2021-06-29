@@ -26,20 +26,9 @@ const server = express();
 
 const PORT = process.env.PORT || 3001;
 
-const whitelist = [process.env.FRONTEND_URL, process.env.FRONTEND_PROD_URL]
-server.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || whitelist.indexOf(origin) !== -1) {
-        // origin is in the list therefore it is allowed
-        callback(null, true)
-      } else {
-        // origin is not in the list then --> ERROR
-        callback(new Error("Not allowed by cors!"))
-      }
-    },
-  })
-) 
+const corsOptions = {
+  origin: "http://localhost:3001"
+}
   
 server.use(cors(corsOptions ))
 
