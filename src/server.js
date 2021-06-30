@@ -27,7 +27,7 @@ const server = express();
 const PORT = process.env.PORT || 3001;
 
 const corsOptions = {
-  origin: "http://localhost:3001"
+  origin: "http://localhost:3001/blogs"
 }
   
 server.use(cors(corsOptions ))

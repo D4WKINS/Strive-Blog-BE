@@ -24,6 +24,7 @@ router.get("/", async (req, res, next) => {
     const fileAsBuffer = fs.readFileSync(authorsFilePath);
     const fileAsString = fileAsBuffer.toString();
     const fileAsJSON = JSON.parse(fileAsString);
+    console.log(fileAsJSON)
     res.send(fileAsJSON);
   } catch (error) {
     console.log(err.code)
