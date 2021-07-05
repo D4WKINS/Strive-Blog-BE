@@ -1,7 +1,7 @@
 import express from "express";
 
-import fs from "fs";
-
+import fs from "fs-extra"; // fs = synchronous, fs-extra = asynchronous
+import multer from 'multer'
 import uniqid from "uniqid";
 
 import path, { dirname } from "path";

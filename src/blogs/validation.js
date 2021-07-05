@@ -1,6 +1,7 @@
 import { checkSchema, validationResult } from "express-validator";
 
 const schema = {
+  
   title: {
     in: ["body"],
     isString: {
